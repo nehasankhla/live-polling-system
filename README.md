@@ -1,1 +1,0 @@
-# live-polling-system
