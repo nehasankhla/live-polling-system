@@ -1,0 +1,496 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f5f5f5;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 20px;
+  color: #666;
+}
+
+/* Role Selection */
+.role-selection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.role-selection h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.role-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.role-btn {
+  padding: 12px 32px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #333;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.role-btn:hover {
+  background: #f8f8f8;
+  border-color: #999;
+}
+
+/* Teacher Dashboard */
+.teacher-dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.dashboard-header h2 {
+  font-size: 24px;
+  color: #333;
+  font-weight: 500;
+}
+
+.back-btn {
+  padding: 8px 16px;
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+}
+
+.back-btn:hover {
+  background: #e8e8e8;
+}
+
+.dashboard-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.poll-section,
+.students-section {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.section-title {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* Poll Creation */
+.poll-creation textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  resize: vertical;
+  min-height: 80px;
+  margin-bottom: 16px;
+  font-family: inherit;
+}
+
+.option-input-group {
+  margin-bottom: 12px;
+}
+
+.option-input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.duration-input {
+  margin-bottom: 16px;
+}
+
+.duration-input label {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.duration-input input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.create-poll-btn {
+  width: 100%;
+  padding: 12px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.create-poll-btn:hover {
+  background: #555;
+}
+
+.create-poll-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Students List */
+.students-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.student-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background: #fafafa;
+}
+
+.student-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.student-name {
+  font-size: 14px;
+  color: #333;
+}
+
+.answer-status {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.answer-status.answered {
+  background: #d4edda;
+  color: #155724;
+}
+
+.answer-status.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.remove-student-btn {
+  padding: 6px 12px;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  color: #721c24;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.remove-student-btn:hover {
+  background: #f5c6cb;
+}
+
+/* Poll Results */
+.poll-results {
+  margin-top: 20px;
+}
+
+.results-question {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.result-item {
+  margin-bottom: 16px;
+}
+
+.result-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #666;
+}
+
+.result-bar-container {
+  width: 100%;
+  height: 30px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.result-bar {
+  height: 100%;
+  background: #4a90e2;
+  transition: width 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Student Dashboard */
+.student-dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: #ffffff;
+}
+
+.student-container {
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.student-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.student-header h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.student-welcome {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Name Entry */
+.name-entry {
+  text-align: center;
+}
+
+.name-entry h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.name-input-group {
+  margin-bottom: 20px;
+}
+
+.name-input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.join-btn {
+  width: 100%;
+  padding: 12px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.join-btn:hover {
+  background: #555;
+}
+
+.join-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #c00;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Poll Question */
+.poll-question {
+  margin-top: 20px;
+}
+
+.question-text {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.timer {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.timer.warning {
+  color: #c00;
+  font-weight: 600;
+}
+
+.options-list {
+  margin-bottom: 20px;
+}
+
+.option-item {
+  padding: 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #fff;
+  font-size: 15px;
+  color: #333;
+}
+
+.option-item:hover {
+  border-color: #999;
+  background: #f8f8f8;
+}
+
+.option-item.selected {
+  border-color: #4a90e2;
+  background: #e8f4fd;
+}
+
+.submit-answer-btn {
+  width: 100%;
+  padding: 12px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.submit-answer-btn:hover {
+  background: #555;
+}
+
+.submit-answer-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Waiting State */
+.waiting-state {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.waiting-state h3 {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.waiting-state p {
+  font-size: 14px;
+  color: #999;
+}
+
+/* Results Display for Students */
+.student-results {
+  margin-top: 20px;
+}
+
+.student-results h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.no-data {
+  text-align: center;
+  color: #999;
+  padding: 20px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .student-container {
+    padding: 24px;
+  }
+}
